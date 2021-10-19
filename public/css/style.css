@@ -1,0 +1,86 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 50px;
+  font-family: "Oswald", sans-serif;
+  background-color: #0B0E47;
+  color: white;
+}
+
+i{
+  color: white;
+  font-size: 9rem;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+img{
+  width: 20%;
+}
+figure{
+  width: 35%;
+}
+.titulo{
+  text-align: center;
+}
+.botonAgregar , .botonModificar{
+  color: white;
+  background-color: green;
+  padding: 10px;
+  border-radius: 10px;
+}
+.botonBorrar{
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.botonVolver{
+  color: white;
+  background-color: #00B7FF;
+  padding: 10px;
+  border-radius: 10px;
+}
+.formulario{
+  margin: auto;
+  width: 20%;
+}
+.nav-search {
+  padding: 8px 0;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.nav-search-boton {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  color: gray;
+  border-left: solid 1px #ebebeb;
+  position: absolute;
+  right: 51%;
+  bottom: 12.5px;
+  height: 60%;
+}
+.search-form-input {
+  border:solid 1px #ebebeb;
+  width: 50%;
+  padding:  7px 35px 7px 7px;
+  border-radius: 3px;
+  height: 40px;
+  display: block;
+}
+.lupa-form {
+  padding: 0;
+  background: 0 0;
+  color: #666;
+  line-height: 1em;
+}
+.fa-2x{
+  color: black;
+}

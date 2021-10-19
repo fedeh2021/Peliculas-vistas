@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.title %> </title>
+    <%- include('./../views/partials/header') %>
+
+</head>
+<body>
+    <h1><%= movie.title %> </h1>    
+    <br>
+    <img src="/img/<%= movie.imagen %>">
+    <p>RATING: <%= movie.rating %> </p>
+    <p>PREMIOS: <%= movie.awards %> </p>
+    <p>DURACION: <%= movie.length + ' min'%> </p>
+    <p>ESTRENO: <%= movie.release_date %> </p>
+    
+    <br>
+    <section>
+        <a class="botonModificar" href="/movies/edit/<%=movie.id%>">Editar</a>
+        <br></br>
+        <form action="/movies/<%=movie.id%>?_method=DELETE" class="" method="POST">
+        <button type="submit" class="botonBorrar">Eliminar</button>
+        </form>
+        <br></br>
+        <a class="botonVolver" href="/movies">Volver</a>
+    </section>
+
+</body>
+</html>

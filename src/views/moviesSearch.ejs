@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelicula buscada</title>
+    <%- include('./../views/partials/header') %>
+
+</head>
+<body>
+<main>
+        <div class="container products-wrapper">
+    <div class="">
+    <% for(let i=0; i < movies.length; i++) { %> 
+    <div class="">
+        <section class="">
+            <a href="/movies/detail/<%=movies[i].id  %>">
+                <figure class="">
+                    <img src="/img/<%=movies[i].imagen %>" alt="imagen de producto">
+                </figure>
+                
+            </a>
+        </section>
+    </div>
+    <% } %>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
