@@ -3,6 +3,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const { response } = require('express');
+const moment = require('moment');
 const uploadFile = require ("../middlewares/imageMiddleware");
 
 //Aquí tienen otra forma de llamar a los modelos creados
@@ -13,8 +14,10 @@ const Actors = db.Actor;
 
 const moviesController = {
     list: (req, res) => {
-        db.Movie.findAll({include: [{association: 'genre'}]})    
-        .then((Movie) => {
+        db.Movie.findAll({
+            include: ['genre']
+        })    
+        .then((movies) => {
             
           // let listaMovies = [];
            //for(Movie of Movie) {
@@ -24,11 +27,8 @@ const moviesController = {
              //   nombre: Movie.title
             //}
            // listaMovies.push(objaux)
-            res.render("moviesList", {movies: Movie})
-            
+            res.render("moviesList", {movies})
         })
-    
-
     },
     'detail': (req, res) => {
         Movies.findByPk(req.params.id, {

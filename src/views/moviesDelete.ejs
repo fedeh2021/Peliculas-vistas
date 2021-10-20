@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <h1>Estas seguro de querer borrar esta película: <%= Movie.title %>???</h1>
+    <h1>Estas seguro de querer borrar esta película: ¿ <%= Movie.title %>?</h1>
     <p>
-        <form action="/movies/delete/<%= Movie.id %>" method="POST">
+        <form action="/movies/delete/<%= Movie.id %>?_method=PUT" method="POST">
             <br>
             <p> <button class="botonBorrar" type="submit">Borrar la Película</button>
             

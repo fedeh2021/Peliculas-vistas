@@ -12,8 +12,8 @@ router.get('/movies/search', moviesController.search)
 router.get('/movies/add', moviesController.add);
 router.post('/movies/create', uploadFile.single('image'), moviesController.create);
 router.get('/movies/edit/:id', moviesController.edit);
-router.post('/movies/edit/:id', moviesController.update);
-router.delete('/movies/:id', moviesController.delete);
-router.post('/movies/delete/:id', moviesController.destroy);
+router.put('/movies/update/:id', uploadFile.single('image'), moviesController.update);
+router.get('/movies/delete/:id', moviesController.delete);
+router.delete('/movies/delete/:id', moviesController.destroy);
 
 module.exports = router;

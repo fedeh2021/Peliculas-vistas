@@ -20,9 +20,13 @@
     <br>
     <ul>
         <% for( let i = 0; i < movies.length; i++ ) { %>
-        <li>
-            <a href="/movies/detail/<%=movies[i].id %>"><%=movies[i].title %></a>
-        </li>
+        <ul>
+            <br></br>
+            
+            <a href="/movies/detail/<%=movies[i].id %>"><img src="/img/<%= movies[i].imagen %>">
+            <%=movies[i].title %></a>
+            
+        </ul>
         <% } %>
 
     </ul>

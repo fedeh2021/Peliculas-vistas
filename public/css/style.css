@@ -20,6 +20,9 @@ a {
   text-decoration: none;
 }
 img{
+  width: 10em;
+}
+.foto-pelicula{
   width: 20%;
 }
 figure{
